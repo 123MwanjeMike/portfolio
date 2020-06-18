@@ -1,0 +1,17 @@
+/* your styles go here */
+
+p.social a.twitter {
+    background-color: #00acee;
+}
+
+p.social a.linkedin {
+    background-color: #0e76a8;
+}
+
+p.social a.github {
+    background-color: #211F1F;
+}
+
+p.social a.email {
+    background-color: #B23121;
+}
