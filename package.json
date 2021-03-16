@@ -70,9 +70,9 @@
   "keywords": [
     "portfolio"
   ],
-  "main": "n/a",
+  "main": "/src/pages/index.js",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop"
+    "dev": "gatsby develop"
   }
 }

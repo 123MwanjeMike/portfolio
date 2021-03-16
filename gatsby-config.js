@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Portfolio',
+    title: 'Mike Mwanje',
     description:
-      'My Resume',
+      'Resume/CV',
   },
   pathPrefix: '/',
   plugins: [
