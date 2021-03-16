@@ -5,6 +5,9 @@ import { Row, Col } from 'react-bootstrap';
 import Glitch from 'components/glitch';
 import Typewriter from 'typewriter-effect';
 import ThemeContext from '../../context';
+
+require('dotenv').config();
+
 class Hero extends React.Component {
   static contextType = ThemeContext;
 
@@ -35,11 +38,9 @@ class Hero extends React.Component {
               />
               <button
                 className="hover-button"
-                onClick={() =>
-                  window.open(
-                    'https://docs.google.com/document/d/1ytAI3WtDLTgLAeKSWY6QDFj6yYTt1V66Y9kHL6pL6zE/edit?usp=sharing',
-                  )
-                }
+                onClick={() => {
+                  window.open(`${process.env.CV_LINK}/export?format=pdf`);
+                }}
               >
                 <span>Download CV</span>
               </button>

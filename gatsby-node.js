@@ -1,6 +1,9 @@
-const path = require('path')
+const path = require('path');
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    node: {
+      fs: 'empty',
+    },
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
@@ -8,5 +11,5 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
-  })
-}
+  });
+};
