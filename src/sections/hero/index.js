@@ -6,9 +6,7 @@ import Glitch from 'components/glitch';
 import Typewriter from 'typewriter-effect';
 import ThemeContext from '../../context';
 
-const CV = `${process.env.CV_FILE_ID}`;
-
-require('dotenv').config();
+const CV = `https://docs.google.com/document/d/1ytAI3WtDLTgLAeKSWY6QDFj6yYTt1V66Y9kHL6pL6zE/export?format=pdf`;
 
 class Hero extends React.Component {
   static contextType = ThemeContext;
@@ -42,7 +40,7 @@ class Hero extends React.Component {
               <button
                 className="hover-button"
                 onClick={() => {
-                  window.open(`https://docs.google.com/document/d/${CV}/export?format=pdf`);
+                  window.open(CV);
                 }}
               >
                 <span>Download CV</span>
