@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 import Progress from 'components/progress'
 import { Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import ThemeContext from '../../context'
 import './styles.scss'
 
@@ -21,14 +21,14 @@ class Hero extends React.Component {
                             <div className="line-text">
                                 <h4>About Me</h4>
                             </div>
-                            <h3>I'm a Full Stack web developer working from home</h3>
+                            <h3>I'm a Full Stack web developer</h3>
                             <div className="separator" />
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit nisi vitae feugiat vestibulum. Aliquam porta nulla vel odio scelerisque, pretium volutpat dui euismod. Integer porttitor dolor placerat malesuada dictum. Fusce enim dolor, dignissim quis ornare at, elementum nec turpis. Donec ac interdum libero, sed condimentum lectus. Nunc nec iaculis tortor. Donec interdum sollicitudin eros in pharetra. Donec ultricies laoreet dictum. Maecenas vestibulum sodales justo, id hendrerit orci aliquet gravida. Nulla facilisi.</p>
                             <div className="social social_icons">
-                                <FontAwesomeIcon icon={faGithub} className="social_icon" onClick={() => window.open('https://www.github.com')}/>
-                                <FontAwesomeIcon icon={faTwitter} className="social_icon" onClick={() => window.open('https://www.twitter.com')} />
-                                <FontAwesomeIcon icon={faYoutube} className="social_icon" onClick={() => window.open('https://www.youtube.com')} />
-                                <FontAwesomeIcon icon={faLinkedin} className="social_icon" onClick={() => window.open('https://www.linkedin.com')} />
+                                <FontAwesomeIcon icon={faGithub} className="social_icon" onClick={() => window.open('https://github.com/123MwanjeMike')}/>
+                                <FontAwesomeIcon icon={faLinkedin} className="social_icon" onClick={() => window.open('https://www.linkedin.com/in/mike-mwanje-470b15155')} />
+                                <FontAwesomeIcon icon={faTwitter} className="social_icon" onClick={() => window.open('https://twitter.com/intent/follow?screen_name=Mwanje_Mike_')} />
+                                <FontAwesomeIcon icon={faWhatsapp} className="social_icon" onClick={() => window.open(' https://wa.me/c/256774019975')} />
                             </div>
                         </div>
                     </Col>
