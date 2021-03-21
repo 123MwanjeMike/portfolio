@@ -29,18 +29,28 @@ class Hero extends React.Component {
               <div className="line-text">
                 <h4>About Me</h4>
               </div>
-              <h3>I'm a Full Stack web developer</h3>
+              <h3>Full-Stack Web Developer</h3>
               <div className="separator" />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus suscipit nisi vitae feugiat vestibulum. Aliquam porta
-                nulla vel odio scelerisque, pretium volutpat dui euismod.
-                Integer porttitor dolor placerat malesuada dictum. Fusce enim
-                dolor, dignissim quis ornare at, elementum nec turpis. Donec ac
-                interdum libero, sed condimentum lectus. Nunc nec iaculis
-                tortor. Donec interdum sollicitudin eros in pharetra. Donec
-                ultricies laoreet dictum. Maecenas vestibulum sodales justo, id
-                hendrerit orci aliquet gravida. Nulla facilisi.
+                I am a Kampala, Uganda based Full-Stack web developer with a
+                drive and hunger for excellence.
+              </p>
+              <p>
+                I have been engineering software solutions since 2018 and have
+                over a year of professional experience in a highly collaborative
+                environment developing web applications that solve business
+                problems.
+              </p>
+              <p>
+                I am also a lifelong learner curious about better ways of
+                solving problems and always ready to learn new tools and
+                technologies.
+                <br></br>
+                During my journey, I have gathered many transferable skills
+                ranging from programming languages like JavaScript, Design
+                Patterns, Version Control with Git, Test Automation, Cloud
+                Computing with GCP and AWS, and Agile Project Management with
+                Scrum
               </p>
               <div className="social social_icons">
                 <FontAwesomeIcon
@@ -78,7 +88,7 @@ class Hero extends React.Component {
           </Col>
           <Col md={6} className="skills">
             <div className="line-text">
-              <h4>My Skills</h4>
+              <h4>My Top Skills</h4>
             </div>
             <div className="skills-container">
               <Progress name="MongoDB" value={80} delay={1100} />
