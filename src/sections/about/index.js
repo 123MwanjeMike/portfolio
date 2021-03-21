@@ -29,7 +29,7 @@ class Hero extends React.Component {
               <div className="line-text">
                 <h4>About Me</h4>
               </div>
-              <h3>I'm a Full Stack web developer working from home</h3>
+              <h3>I'm a Full Stack web developer</h3>
               <div className="separator" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -85,8 +85,8 @@ class Hero extends React.Component {
               <Progress name="React" value={80} delay={1100} />
               <Progress name="Node.js" value={70} delay={1100} />
               <Progress name="Git" value={70} delay={1100} />
-              <Progress name="Test Driven Development" value={80} delay={1100} />
-              <Progress name="Google Cloud Platform" value={60} delay={1100} />
+              <Progress name="TDD" value={80} delay={1100} />
+              <Progress name="GCP" value={60} delay={1100} />
             </div>
           </Col>
         </Row>
