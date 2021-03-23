@@ -188,9 +188,9 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faSmileBeam}
-                value={100}
+                value={6}
                 text="Happy Clients"
-                symbol="+"
+                // symbol="+"
                 duration={3}
               />
             </AnimationContainer>
@@ -199,7 +199,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faPizzaSlice}
-                value={1000}
+                value={20}
                 text="Pizzas Ordered"
                 symbol="+"
                 duration={3}
@@ -210,7 +210,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faQuoteRight}
-                value={500}
+                value={30}
                 text="Reviews"
                 symbol="+"
                 duration={3}
