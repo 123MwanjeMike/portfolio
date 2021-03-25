@@ -32,7 +32,7 @@ class Hero extends React.Component {
               <h3>Full-Stack Web Developer</h3>
               <div className="separator" />
               <p>
-                I am a Kampala, Uganda based Full-Stack web developer with a
+                I am a Kampala, Uganda based MERN Stack web developer with a
                 drive and hunger for excellence.
               </p>
               <p>

@@ -1,35 +1,35 @@
-import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import BaffleText from 'components/baffle-text'
-import AnimationContainer from 'components/animation-container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faAngular, faAws } from '@fortawesome/free-brands-svg-icons'
+import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import BaffleText from 'components/baffle-text';
+import AnimationContainer from 'components/animation-container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faAws } from '@fortawesome/free-brands-svg-icons';
 import {
-  faPencilRuler,
-  faServer,
-  faRobot,
+  faDatabase,
+  faTasks,
   faSmileBeam,
   faPizzaSlice,
   faQuoteRight,
   faCode,
-} from '@fortawesome/free-solid-svg-icons'
-import Counter from 'components/counter'
-import ThemeContext from '../../context'
-import './styles.scss'
+  faDraftingCompass
+} from '@fortawesome/free-solid-svg-icons';
+import Counter from 'components/counter';
+import ThemeContext from '../../context';
+import './styles.scss';
 
 class Services extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       show: false,
-    }
-    this.show = this.show.bind(this)
+    };
+    this.show = this.show.bind(this);
   }
 
-  static contextType = ThemeContext
+  static contextType = ThemeContext;
 
   show() {
-    this.setState({ show: true })
+    this.setState({ show: true });
   }
 
   render() {
@@ -78,7 +78,7 @@ class Services extends React.Component {
         </Row>
         <Row className="bottom">{this.counters()}</Row>
       </section>
-    )
+    );
   }
 
   services() {
@@ -90,7 +90,7 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faReact} />
               </div>
-              <h4>Front-end React</h4>
+              <h4>Front-end Development</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -103,9 +103,9 @@ class Services extends React.Component {
           <Col md={4} className="service border-side">
             <AnimationContainer delay={400} animation="fadeInDown fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAngular} />
+                <FontAwesomeIcon icon={faNodeJs} />
               </div>
-              <h4>Angular Web App</h4>
+              <h4>Back-end Development</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -118,9 +118,9 @@ class Services extends React.Component {
           <Col md={4} className="service">
             <AnimationContainer delay={600} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAws} />
+                <FontAwesomeIcon icon={faDatabase} />
               </div>
-              <h4>AWS Management</h4>
+              <h4>Database Development</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -133,9 +133,9 @@ class Services extends React.Component {
           <Col md={4} className="service">
             <AnimationContainer delay={800} animation="fadeInLeft fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faPencilRuler} className="solid" />
+                <FontAwesomeIcon icon={faDraftingCompass} className="solid" />
               </div>
-              <h4>UI/UX Design</h4>
+              <h4>Architecture Design</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -148,9 +148,9 @@ class Services extends React.Component {
           <Col md={4} className="service border-side">
             <AnimationContainer delay={1000} animation="fadeInUp fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faServer} className="solid" />
+                <FontAwesomeIcon icon={faAws} className="solid" />
               </div>
-              <h4>Linux Server Management</h4>
+              <h4>Cloud Deployment and Provisioning</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -163,9 +163,9 @@ class Services extends React.Component {
           <Col md={4} className="service">
             <AnimationContainer delay={1200} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faRobot} className="solid" />
+                <FontAwesomeIcon icon={faTasks} className="solid" />
               </div>
-              <h4>Artifical Intelligence</h4>
+              <h4>Project Management</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
@@ -176,7 +176,7 @@ class Services extends React.Component {
             </AnimationContainer>
           </Col>
         </Row>
-      )
+      );
     }
   }
 
@@ -221,7 +221,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faCode}
-                value={50000}
+                value={100000}
                 text="Lines of Code"
                 symbol="+"
                 duration={3}
@@ -229,9 +229,9 @@ class Services extends React.Component {
             </AnimationContainer>
           </Col>
         </Container>
-      )
+      );
     }
   }
 }
 
-export default Services
+export default Services;
