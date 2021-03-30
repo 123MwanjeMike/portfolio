@@ -11,7 +11,7 @@ import {
   faPizzaSlice,
   faQuoteRight,
   faCode,
-  faDraftingCompass
+  faDraftingCompass,
 } from '@fortawesome/free-solid-svg-icons';
 import Counter from 'components/counter';
 import ThemeContext from '../../context';
@@ -92,11 +92,11 @@ class Services extends React.Component {
               </div>
               <h4>Front-end Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Front-end, is the visual part of the application that users
+                interact with. I use the technologies HTML5, CSS3, Javascript to
+                build responsive and interactive designs, React for
+                sophisticated Single-Page-Applications, and Gatsby for high
+                performant and fast applications.
               </p>
             </AnimationContainer>
           </Col>
@@ -107,11 +107,12 @@ class Services extends React.Component {
               </div>
               <h4>Back-end Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                {/* (NodeJs, Javascript runtime environment, SOLID design
+                principles, design patterns,ExpressJs, third party api's,TDD with Chai and Mocha,Jest,...)   Lorem ipsum dolor sit amet, */}
+                consectetur adipiscing elit. Vivamus dui sem, vulputate vitae
+                dolor sed, sollicitudin pharetra nisi. In et sem libero. Integer
+                pretium, tellus eu pellentesque tristique, ex libero maximus
+                elit, mollis tristique urna eros non tellus
               </p>
             </AnimationContainer>
           </Col>
@@ -122,6 +123,7 @@ class Services extends React.Component {
               </div>
               <h4>Database Development</h4>
               <p>
+                {/* MySQL, mongoDB, MariaDB, CoucheDB, Redis */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
@@ -137,6 +139,7 @@ class Services extends React.Component {
               </div>
               <h4>Architecture Design</h4>
               <p>
+                {/* UML, Client Server, Pub-sub, etc */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
@@ -152,6 +155,7 @@ class Services extends React.Component {
               </div>
               <h4>Cloud Deployment and Provisioning</h4>
               <p>
+                {/* Heroku, Netlify, GCP, AWS, CI/CD pipelines, TravisCI, CircleCI,... */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
@@ -167,6 +171,7 @@ class Services extends React.Component {
               </div>
               <h4>Project Management</h4>
               <p>
+                {/* tRELLO, gITHUB PROJECTS, Slack,accountability process, agile, scrum */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
