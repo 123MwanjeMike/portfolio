@@ -92,10 +92,9 @@ class Services extends React.Component {
               </div>
               <h4>Front-end Development</h4>
               <p>
-                Front-end, is the visual part of the application that users
-                interact with. I use the technologies HTML5, CSS3, Javascript to
-                build responsive and interactive designs, React for
-                sophisticated Single-Page-Applications, and Gatsby for high
+                Working with technologies like HTML5, CSS3, Javascript to build
+                responsive and interactive designs, React(a javascript library)
+                for sophisticated Single-Page-Applications, and Gatsby for high
                 performant and fast applications.
               </p>
             </AnimationContainer>
@@ -107,12 +106,10 @@ class Services extends React.Component {
               </div>
               <h4>Back-end Development</h4>
               <p>
-                {/* (NodeJs, Javascript runtime environment, SOLID design
-                principles, design patterns,ExpressJs, third party api's,TDD with Chai and Mocha,Jest,...)   Lorem ipsum dolor sit amet, */}
-                consectetur adipiscing elit. Vivamus dui sem, vulputate vitae
-                dolor sed, sollicitudin pharetra nisi. In et sem libero. Integer
-                pretium, tellus eu pellentesque tristique, ex libero maximus
-                elit, mollis tristique urna eros non tellus
+                Using Node.js, a javascript runtime environment, and Express.js,
+                a back-end web application framework for Node.js to create
+                robust Backend services and RESTful APIs using a Test Driven
+                Development(TDD) approach with Chai, Mocha and Jest.
               </p>
             </AnimationContainer>
           </Col>
@@ -140,6 +137,7 @@ class Services extends React.Component {
               <h4>Architecture Design</h4>
               <p>
                 {/* UML, Client Server, Pub-sub, etc */}
+                {/* SOLID design principles, design patterns,  */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
