@@ -120,12 +120,10 @@ class Services extends React.Component {
               </div>
               <h4>Database Development</h4>
               <p>
-                {/* MySQL, mongoDB, MariaDB, CoucheDB, Redis */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Design and development of SQL databases like MySQL, MariaDB,
+                SQLite; and NoSQL databases like MongoDB, and Redis to provide a
+                consistent, organised structure for storing and retrieving large
+                amounts of data for varying user requirements.
               </p>
             </AnimationContainer>
           </Col>
