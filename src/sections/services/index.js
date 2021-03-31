@@ -107,8 +107,8 @@ class Services extends React.Component {
               <h4>Back-end Development</h4>
               <p>
                 Using Node.js, a javascript runtime environment, and Express.js,
-                a back-end web application framework for Node.js to create
-                robust Backend services and RESTful APIs using a Test Driven
+                a back-end web application framework for Node.js to create rich
+                Backend services and RESTful APIs using a Test Driven
                 Development(TDD) approach with Chai, Mocha and Jest.
               </p>
             </AnimationContainer>
@@ -148,7 +148,6 @@ class Services extends React.Component {
               </div>
               <h4>Cloud Computing</h4>
               <p>
-                {/*CI/CD pipelines, TravisCI, CircleCI,... */}
                 Cloud deployment with various PaaS and IaaS like MongoAtlas,
                 Heroku, Netlify, AWS, GCP that avail robust cloud provisioning
                 tools; and CI/CD tools that compliment CircleCI and TravisCI.
@@ -162,11 +161,10 @@ class Services extends React.Component {
               </div>
               <h4>Project Management</h4>
               <p>
-                {/* tRELLO, gITHUB PROJECTS, Slack,accountability process, agile, scrum */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
+                Using the Agile framework methodology and Scrum in particular
+                getting team players accountable to the process. Trello and
+                Github Projects are great tools to track project progress and
+                visualization of the same.
               </p>
             </AnimationContainer>
           </Col>
