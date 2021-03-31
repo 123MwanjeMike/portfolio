@@ -134,8 +134,8 @@ class Services extends React.Component {
               </div>
               <h4>Software Design</h4>
               <p>
-                The S.O.L.I.D design principles, and creational and structural
-                design patterns guide designs for extensible, modular, reusable,
+                With the S.O.L.I.D design principles, creational and structural
+                design patterns in mind to design extensible, modular, reusable,
                 secure, and scalable software solutions which are then modelled
                 with ADL and UML diagrams.
               </p>
@@ -146,13 +146,12 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faAws} className="solid" />
               </div>
-              <h4>Cloud Deployment and Provisioning</h4>
+              <h4>Cloud Computing</h4>
               <p>
-                {/* Heroku, Netlify, GCP, AWS, CI/CD pipelines, TravisCI, CircleCI,... */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
+                {/*CI/CD pipelines, TravisCI, CircleCI,... */}
+                Cloud deployment with various PaaS and IaaS like MongoAtlas,
+                Heroku, Netlify, AWS, GCP that avail robust cloud provisioning
+                tools; and CI/CD tools that compliment CircleCI and TravisCI.
               </p>
             </AnimationContainer>
           </Col>
