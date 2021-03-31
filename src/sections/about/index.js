@@ -32,7 +32,7 @@ class Hero extends React.Component {
               <h3>Full-Stack Web Developer</h3>
               <div className="separator" />
               <p>
-                I am a Kampala, Uganda based Full-Stack web developer with a
+                I am a Kampala, Uganda based MERN Stack web developer with a
                 drive and hunger for excellence.
               </p>
               <p>
@@ -47,10 +47,10 @@ class Hero extends React.Component {
                 technologies.
                 <br></br>
                 During my journey, I have gathered many transferable skills
-                ranging from programming languages like JavaScript, Design
-                Patterns, Version Control with Git, Test Automation, Cloud
-                Computing with GCP and AWS, and Agile Project Management with
-                Scrum
+                ranging from programming languages like JavaScript and
+                Typescript, Design Patterns, Version Control with Git, Test
+                Automation, Cloud Computing with GCP and AWS, and Agile Project
+                Management with Scrum
               </p>
               <div className="social social_icons">
                 <FontAwesomeIcon

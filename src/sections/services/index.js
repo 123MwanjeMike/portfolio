@@ -1,35 +1,35 @@
-import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import BaffleText from 'components/baffle-text'
-import AnimationContainer from 'components/animation-container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faAngular, faAws } from '@fortawesome/free-brands-svg-icons'
+import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import BaffleText from 'components/baffle-text';
+import AnimationContainer from 'components/animation-container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faAws } from '@fortawesome/free-brands-svg-icons';
 import {
-  faPencilRuler,
-  faServer,
-  faRobot,
+  faDatabase,
+  faTasks,
   faSmileBeam,
   faPizzaSlice,
   faQuoteRight,
   faCode,
-} from '@fortawesome/free-solid-svg-icons'
-import Counter from 'components/counter'
-import ThemeContext from '../../context'
-import './styles.scss'
+  faDraftingCompass,
+} from '@fortawesome/free-solid-svg-icons';
+import Counter from 'components/counter';
+import ThemeContext from '../../context';
+import './styles.scss';
 
 class Services extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       show: false,
-    }
-    this.show = this.show.bind(this)
+    };
+    this.show = this.show.bind(this);
   }
 
-  static contextType = ThemeContext
+  static contextType = ThemeContext;
 
   show() {
-    this.setState({ show: true })
+    this.setState({ show: true });
   }
 
   render() {
@@ -78,7 +78,7 @@ class Services extends React.Component {
         </Row>
         <Row className="bottom">{this.counters()}</Row>
       </section>
-    )
+    );
   }
 
   services() {
@@ -90,93 +90,86 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faReact} />
               </div>
-              <h4>Front-end React</h4>
+              <h4>Front-end Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Working with technologies like HTML5, CSS3, Javascript to build
+                responsive and interactive designs, React(a javascript library)
+                for sophisticated Single-Page-Applications, and Gatsby for high
+                performant and fast applications.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service border-side">
             <AnimationContainer delay={400} animation="fadeInDown fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAngular} />
+                <FontAwesomeIcon icon={faNodeJs} />
               </div>
-              <h4>Angular Web App</h4>
+              <h4>Back-end Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Using Node.js, a javascript runtime environment, and Express.js,
+                a back-end web application framework for Node.js to create rich
+                Backend services and RESTful APIs using a Test Driven
+                Development(TDD) approach with Chai, Mocha and Jest.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service">
             <AnimationContainer delay={600} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAws} />
+                <FontAwesomeIcon icon={faDatabase} />
               </div>
-              <h4>AWS Management</h4>
+              <h4>Database Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Design and development of SQL databases like MySQL, MariaDB,
+                SQLite; and NoSQL databases like MongoDB, and Redis to provide a
+                consistent, organised structure for storing and retrieving large
+                amounts of data for varying user requirements.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service">
             <AnimationContainer delay={800} animation="fadeInLeft fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faPencilRuler} className="solid" />
+                <FontAwesomeIcon icon={faDraftingCompass} className="solid" />
               </div>
-              <h4>UI/UX Design</h4>
+              <h4>Software Design</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                With the S.O.L.I.D design principles, creational and structural
+                design patterns in mind to design extensible, modular, reusable,
+                secure, and scalable software solutions which are then modelled
+                with ADL and UML diagrams.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service border-side">
             <AnimationContainer delay={1000} animation="fadeInUp fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faServer} className="solid" />
+                <FontAwesomeIcon icon={faAws} className="solid" />
               </div>
-              <h4>Linux Server Management</h4>
+              <h4>Cloud Computing</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Cloud deployment with various PaaS and IaaS like MongoAtlas,
+                Heroku, Netlify, AWS, GCP that avail robust cloud provisioning
+                tools; and CI/CD tools that compliment CircleCI and TravisCI.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service">
             <AnimationContainer delay={1200} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faRobot} className="solid" />
+                <FontAwesomeIcon icon={faTasks} className="solid" />
               </div>
-              <h4>Artifical Intelligence</h4>
+              <h4>Project Management</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Using the Agile framework methodology and Scrum in particular
+                getting team players accountable to the process. Trello and
+                Github Projects are great tools to track project progress and
+                visualization of the same.
               </p>
             </AnimationContainer>
           </Col>
         </Row>
-      )
+      );
     }
   }
 
@@ -188,9 +181,9 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faSmileBeam}
-                value={100}
+                value={6}
                 text="Happy Clients"
-                symbol="+"
+                // symbol="+"
                 duration={3}
               />
             </AnimationContainer>
@@ -199,7 +192,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faPizzaSlice}
-                value={1000}
+                value={20}
                 text="Pizzas Ordered"
                 symbol="+"
                 duration={3}
@@ -210,7 +203,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faQuoteRight}
-                value={500}
+                value={30}
                 text="Reviews"
                 symbol="+"
                 duration={3}
@@ -221,7 +214,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faCode}
-                value={50000}
+                value={100000}
                 text="Lines of Code"
                 symbol="+"
                 duration={3}
@@ -229,9 +222,9 @@ class Services extends React.Component {
             </AnimationContainer>
           </Col>
         </Container>
-      )
+      );
     }
   }
 }
 
-export default Services
+export default Services;
