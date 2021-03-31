@@ -132,15 +132,12 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faDraftingCompass} className="solid" />
               </div>
-              <h4>Architecture Design</h4>
+              <h4>Software Design</h4>
               <p>
-                {/* UML, Client Server, Pub-sub, etc */}
-                {/* SOLID design principles, design patterns,  */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                The S.O.L.I.D design principles, and creational and structural
+                design patterns guide designs for extensible, modular, reusable,
+                secure, and scalable software solutions which are then modelled
+                with ADL and UML diagrams.
               </p>
             </AnimationContainer>
           </Col>
@@ -156,7 +153,6 @@ class Services extends React.Component {
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
                 tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
               </p>
             </AnimationContainer>
           </Col>
@@ -172,7 +168,6 @@ class Services extends React.Component {
                 dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
                 In et sem libero. Integer pretium, tellus eu pellentesque
                 tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
               </p>
             </AnimationContainer>
           </Col>

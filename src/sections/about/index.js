@@ -47,10 +47,10 @@ class Hero extends React.Component {
                 technologies.
                 <br></br>
                 During my journey, I have gathered many transferable skills
-                ranging from programming languages like JavaScript, Design
-                Patterns, Version Control with Git, Test Automation, Cloud
-                Computing with GCP and AWS, and Agile Project Management with
-                Scrum
+                ranging from programming languages like JavaScript and
+                Typescript, Design Patterns, Version Control with Git, Test
+                Automation, Cloud Computing with GCP and AWS, and Agile Project
+                Management with Scrum
               </p>
               <div className="social social_icons">
                 <FontAwesomeIcon
