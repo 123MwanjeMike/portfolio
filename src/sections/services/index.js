@@ -108,8 +108,8 @@ class Services extends React.Component {
               <p>
                 Using Node.js, a javascript runtime environment, and Express.js,
                 a back-end web application framework for Node.js to create rich
-                Backend services and RESTful APIs using a Test Driven
-                Development(TDD) approach with Chai, Mocha and Jest.
+                Backend services and RESTful APIs unit tested with chai, and
+                mocha/Jest; and Postman for intergration tests.
               </p>
             </AnimationContainer>
           </Col>
