@@ -1,29 +1,29 @@
-import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import { graphql, StaticQuery } from 'gatsby'
-import BaffleText from 'components/baffle-text'
-import AnimationContainer from 'components/animation-container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
-import Slider from 'react-slick'
-import ThemeContext from '../../context'
-import 'slick-carousel/slick/slick-theme.css'
-import './styles.scss'
+import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import { graphql, StaticQuery } from 'gatsby';
+import BaffleText from 'components/baffle-text';
+import AnimationContainer from 'components/animation-container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import Slider from 'react-slick';
+import ThemeContext from '../../context';
+import 'slick-carousel/slick/slick-theme.css';
+import './styles.scss';
 
 class Testimonials extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       show: false,
-    }
+    };
 
-    this.show = this.show.bind(this)
+    this.show = this.show.bind(this);
   }
 
-  static contextType = ThemeContext
+  static contextType = ThemeContext;
 
   show() {
-    this.setState({ show: true })
+    this.setState({ show: true });
   }
 
   render() {
@@ -49,7 +49,7 @@ class Testimonials extends React.Component {
               </div>
               <div className="heading">
                 <BaffleText
-                  text="Reviews by Clients"
+                  text="Reviews"
                   revealDuration={500}
                   revealDelay={500}
                   parentMethod={this.show}
@@ -75,7 +75,7 @@ class Testimonials extends React.Component {
         </Row>
         <Row className="bottom">{this.clients()}</Row>
       </section>
-    )
+    );
   }
 
   clients() {
@@ -87,8 +87,8 @@ class Testimonials extends React.Component {
               <img src={value.node.childImageSharp.fluid.src} alt="client" />
             </AnimationContainer>
           </Col>
-        )
-      })
+        );
+      });
     }
   }
 
@@ -104,13 +104,13 @@ class Testimonials extends React.Component {
       autoplay: true,
       autoplaySpeed: 10000,
       loop: true,
-    }
+    };
     if (this.state.show) {
       return (
         <AnimationContainer delay={100} animation="fadeIn slow">
           <Slider {...settings}>{this.testimonial_items()}</Slider>
         </AnimationContainer>
-      )
+      );
     }
   }
   testimonial_items() {
@@ -142,8 +142,8 @@ class Testimonials extends React.Component {
               </div>
             </div>
           </div>
-        )
-      })
+        );
+      });
     }
   }
 
@@ -155,50 +155,59 @@ class Testimonials extends React.Component {
             <FontAwesomeIcon icon={faQuoteLeft} />
           </AnimationContainer>
         </div>
-      )
+      );
     }
   }
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
-          query {
-            clients: allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "clients"}}) {
-              edges {
-                node {
+      query {
+        clients: allFile(
+          filter: {
+            extension: { regex: "/(png)/" }
+            relativeDirectory: { eq: "clients" }
+          }
+        ) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  src
+                }
+              }
+            }
+          }
+        }
+        testimonials: allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/(testimonials)/" } }
+          sort: { fields: [frontmatter___id], order: ASC }
+          limit: 8
+        ) {
+          edges {
+            content: node {
+              html
+              frontmatter {
+                id
+                name
+                profession
+                heading
+                image {
                   childImageSharp {
-                    fluid(maxWidth: 500) {
+                    fluid(maxWidth: 200, maxHeight: 200) {
                       src
                     }
                   }
                 }
               }
             }
-            testimonials: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(testimonials)/"}}, sort: {fields: [frontmatter___id], order: ASC}, limit: 8) {
-                edges {
-                  content: node {
-                    html
-                    frontmatter {
-                      id
-                      name
-                      profession
-                      heading
-                      image {
-                        childImageSharp {
-                          fluid(maxWidth: 200, maxHeight: 200) {
-                            src
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
           }
-        `}
+        }
+      }
+    `}
     render={({ clients, testimonials }) => (
       <Testimonials clients={clients} testimonials={testimonials} {...props} />
     )}
   />
-)
+);
