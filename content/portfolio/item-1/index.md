@@ -1,6 +1,7 @@
 ---
 id: 1
-image: './image.jpg'
-title: "Front-end Development"
-category: "React.js"
+image: './portfolio.png'
+link: 'https://mikemwanje.netlify.com'
+title: "Portfolio: React + Gatsby"
+category: "Front-end"
 ---
