@@ -1,6 +1,7 @@
 ---
 id: 3
-image: './image.jpg'
-title: "Angular Project"
-category: "Angular.js"
+image: './delv_api.png'
+link: 'https://delv-dev.herokuapp.com/'
+title: "Delv: Node.js + Express.js"
+category: "Back-end"
 ---
