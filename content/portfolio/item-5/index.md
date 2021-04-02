@@ -1,6 +1,7 @@
 ---
 id: 5
-image: './image.jpg'
-title: "UI Deisgn for Company"
-category: "UI/UX Design"
+image: './blog_template.png'
+link: 'https://123mwanjemike.github.io/blog/index.html'
+title: "Blog Template: HTML5 + CSS3"
+category: "Front-end"
 ---
