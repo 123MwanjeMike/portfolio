@@ -214,7 +214,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faCode}
-                value={100000}
+                value={500000}
                 text="Lines of Code"
                 symbol="+"
                 duration={3}
