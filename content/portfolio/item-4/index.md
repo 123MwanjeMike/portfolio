@@ -1,6 +1,7 @@
 ---
 id: 4
-image: './image.jpg'
-title: "Angular + Ionic "
-category: "Angular.js"
+image: 'os_save.png'
+link: 'https://os-save.herokuapp.com/'
+title: "OS Save: Node.js + Pug"
+category: "Back-end"
 ---
