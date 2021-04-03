@@ -76,70 +76,84 @@ class Contact extends React.Component {
   form() {
     if (this.state.show || this.context.height === 'auto') {
       return (
-        <AnimationContainer delay={0} animation="fadeInUp fast">
-          <div className="form-container">
-            <div className="line-text">
-              <h4>Get In Touch</h4>
-              <AnimationContainer delay={50} animation="fadeInUp fast">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className={`name ${
-                      this.check(this.state.name) ? '' : 'error'
-                    }`}
-                    placeholder="Name"
-                    onChange={(e) => this.setState({ name: e.target.value })}
-                  />
-                </div>
-              </AnimationContainer>
-              <AnimationContainer delay={100} animation="fadeInUp fast">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className={`email ${
-                      this.check(this.state.email) ? '' : 'error'
-                    }`}
-                    placeholder="Email"
-                    onChange={(e) => this.setState({ email: e.target.value })}
-                  />
-                </div>
-              </AnimationContainer>
-              <AnimationContainer delay={150} animation="fadeInUp fast">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="phone"
-                    placeholder="Phone"
-                    onChange={(e) => this.setState({ phone: e.target.value })}
-                  />
-                </div>
-              </AnimationContainer>
-              <AnimationContainer delay={200} animation="fadeInUp fast">
-                <div className="form-group">
-                  <textarea
-                    className={`message ${
-                      this.check(this.state.message) ? '' : 'error'
-                    }`}
-                    placeholder="Message"
-                    onChange={(e) => this.setState({ message: e.target.value })}
-                  ></textarea>
-                </div>
-              </AnimationContainer>
-              <AnimationContainer delay={250} animation="fadeInUp fast">
-                <div className="submit">
-                  <button
-                    className={`hover-button ${
-                      this.state.error ? 'error' : ''
-                    }`}
-                    onClick={() => this.submit()}
-                  >
-                    <span>Send Message</span>
-                  </button>
-                </div>
-              </AnimationContainer>
+        <form
+          method="post"
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
+          <AnimationContainer delay={0} animation="fadeInUp fast">
+            <div className="form-container">
+              <div className="line-text">
+                <h4>Get In Touch</h4>
+                <AnimationContainer delay={50} animation="fadeInUp fast">
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className={`name ${
+                        this.check(this.state.name) ? '' : 'error'
+                      }`}
+                      placeholder="Name"
+                      onChange={(e) => this.setState({ name: e.target.value })}
+                    />
+                  </div>
+                </AnimationContainer>
+                <AnimationContainer delay={100} animation="fadeInUp fast">
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className={`email ${
+                        this.check(this.state.email) ? '' : 'error'
+                      }`}
+                      placeholder="Email"
+                      name="_replyto"
+                      onChange={(e) => this.setState({ email: e.target.value })}
+                    />
+                  </div>
+                </AnimationContainer>
+                <AnimationContainer delay={150} animation="fadeInUp fast">
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="phone"
+                      placeholder="Phone"
+                      onChange={(e) => this.setState({ phone: e.target.value })}
+                    />
+                  </div>
+                </AnimationContainer>
+                <AnimationContainer delay={200} animation="fadeInUp fast">
+                  <div className="form-group">
+                    <textarea
+                      className={`message ${
+                        this.check(this.state.message) ? '' : 'error'
+                      }`}
+                      placeholder="Message"
+                      onChange={(e) =>
+                        this.setState({ message: e.target.value })
+                      }
+                    ></textarea>
+                  </div>
+                </AnimationContainer>
+                <AnimationContainer delay={250} animation="fadeInUp fast">
+                  <div data-netlify-recaptcha="true"></div>
+                  <div className="submit">
+                    <button
+                      className={`hover-button ${
+                        this.state.error ? 'error' : ''
+                      }`}
+                      onClick={() => this.submit()}
+                    >
+                      <span>Send Message</span>
+                    </button>
+                  </div>
+                </AnimationContainer>
+              </div>
             </div>
-          </div>
-        </AnimationContainer>
+          </AnimationContainer>
+        </form>
       );
     }
   }
