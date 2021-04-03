@@ -33,7 +33,7 @@ class Contact extends React.Component {
     }
   }
 
-  submit() {
+  submit(e) {
     if (
       this.state.name === '' ||
       this.state.email === '' ||
@@ -42,7 +42,17 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      swal('Success!', 'Message sent!', 'success');
+      e.preventDefault();
+      let formData = new FormData(e.target.form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => {
+          swal('Success!', 'Message sent!', 'success');
+        })
+        .catch((error) => alert(error));
     }
   }
   render() {
@@ -79,6 +89,8 @@ class Contact extends React.Component {
     if (this.state.show || this.context.height === 'auto') {
       return (
         <form
+          id="contact"
+          netlify
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
@@ -106,7 +118,6 @@ class Contact extends React.Component {
                   <div className="form-group">
                     <input
                       type="text"
-                      name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
                       }`}
@@ -148,7 +159,7 @@ class Contact extends React.Component {
                       className={`hover-button ${
                         this.state.error ? 'error' : ''
                       }`}
-                      onClick={() => this.submit()}
+                      onClick={(e) => this.submit(e)}
                     >
                       <span>Send Message</span>
                     </button>
