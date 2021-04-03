@@ -89,7 +89,7 @@ class Contact extends React.Component {
     if (this.state.show || this.context.height === 'auto') {
       return (
         <form
-          id="contact"
+          name="contact"
           netlify
           data-netlify="true"
           netlify-honeypot="bot-field"
