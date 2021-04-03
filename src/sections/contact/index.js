@@ -1,4 +1,5 @@
 import React from 'react';
+import swal from 'sweetalert';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
 import AnimationContainer from 'components/animation-container';
@@ -41,6 +42,7 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
+      swal('Success!', 'Message sent!', 'success');
     }
   }
   render() {
