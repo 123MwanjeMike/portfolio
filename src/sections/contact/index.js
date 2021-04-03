@@ -42,7 +42,8 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      swal('Success!', 'Message sent!', 'success');
+    //   swal('Success!', 'Message sent!', 'success');
+      swal('Message sent!');
     }
   }
   render() {
@@ -79,6 +80,7 @@ class Contact extends React.Component {
     if (this.state.show || this.context.height === 'auto') {
       return (
         <form
+          netlify
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
