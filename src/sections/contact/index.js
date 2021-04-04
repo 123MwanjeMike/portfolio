@@ -10,12 +10,10 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: {
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-      },
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
       error: false,
       show: false,
     };
@@ -46,9 +44,9 @@ class Contact extends React.Component {
   submit(e) {
     e.preventDefault();
     if (
-      this.state.values.name === '' ||
-      this.state.values.email === '' ||
-      this.state.values.message === ''
+      this.state.name === '' ||
+      this.state.email === '' ||
+      this.state.message === ''
     ) {
       this.setState({ error: true });
     } else {
@@ -56,7 +54,7 @@ class Contact extends React.Component {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'get-in-touch', ...this.state.values }),
+        body: this.encode({ 'form-name': 'get-in-touch', ...this.state }),
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
@@ -118,23 +116,23 @@ class Contact extends React.Component {
                       type="text"
                       name="name"
                       className={`name ${
-                        this.check(this.state.values.name) ? '' : 'error'
+                        this.check(this.state.name) ? '' : 'error'
                       }`}
                       placeholder="Name"
-                      onChange={(e) => this.values.setState({ name: e.target.value })}
+                      onChange={(e) => this.setState({ name: e.target.value })}
                     />
                   </div>
                 </AnimationContainer>
                 <AnimationContainer delay={100} animation="fadeInUp fast">
                   <div className="form-group">
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       className={`email ${
-                        this.check(this.state.values.email) ? '' : 'error'
+                        this.check(this.state.email) ? '' : 'error'
                       }`}
                       placeholder="Email"
-                      onChange={(e) => this.values.setState({ email: e.target.value })}
+                      onChange={(e) => this.setState({ email: e.target.value })}
                     />
                   </div>
                 </AnimationContainer>
@@ -145,7 +143,7 @@ class Contact extends React.Component {
                       name="phone"
                       className="phone"
                       placeholder="Phone"
-                      onChange={(e) => this.values.setState({ phone: e.target.value })}
+                      onChange={(e) => this.setState({ phone: e.target.value })}
                     />
                   </div>
                 </AnimationContainer>
@@ -154,11 +152,11 @@ class Contact extends React.Component {
                     <textarea
                       name="message"
                       className={`message ${
-                        this.check(this.state.values.message) ? '' : 'error'
+                        this.check(this.state.message) ? '' : 'error'
                       }`}
                       placeholder="Message"
                       onChange={(e) =>
-                        this.values.setState({ message: e.target.value })
+                        this.setState({ message: e.target.value })
                       }
                     ></textarea>
                   </div>

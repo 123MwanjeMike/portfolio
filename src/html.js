@@ -22,7 +22,7 @@ export default class HTML extends React.Component {
             data-netlify-recaptcha="true"
           >
             <input type="text" name="name" />
-            <input type="text" name="email" />
+            <input type="email" name="email" />
             <input type="text" name="phone" />
             <textarea name="message"></textarea>
           </form>
