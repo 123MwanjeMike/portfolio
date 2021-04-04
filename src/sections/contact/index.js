@@ -9,6 +9,7 @@ import ThemeContext from '../../context';
 class Contact extends React.Component {
   constructor(props) {
     super(props);
+    this.ContactForm = React.createRef();
     this.state = {
       name: '',
       email: '',
@@ -50,13 +51,24 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
+      const form = this.ContactForm.current;
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'get-in-touch', ...this.state }),
+        body: this.encode({
+          'form-name': form.getAttribute('name'),
+          ...this.state,
+        }),
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
+          navigate('/');
+          this.setState({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
         })
         .catch((error) => {
           swal('Error!', 'Something went wrong!', 'error');
