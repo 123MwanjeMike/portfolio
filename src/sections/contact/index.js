@@ -56,6 +56,7 @@ class Contact extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
+          ...name,
         }),
       })
         .then(() => {
@@ -102,7 +103,6 @@ class Contact extends React.Component {
       return (
         <form
           name="get-in-touch"
-          method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
