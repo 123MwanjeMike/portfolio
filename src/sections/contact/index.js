@@ -56,7 +56,6 @@ class Contact extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
-          ...name,
         }),
       })
         .then(() => {
@@ -109,7 +108,6 @@ class Contact extends React.Component {
           data-netlify-recaptcha="true"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="get-in-touch" />
           <AnimationContainer delay={0} animation="fadeInUp fast">
             <div className="form-container">
               <div className="line-text">
