@@ -42,7 +42,6 @@ class Contact extends React.Component {
   }
 
   submit(e) {
-    e.preventDefault();
     if (
       this.state.name === '' ||
       this.state.email === '' ||
@@ -54,10 +53,7 @@ class Contact extends React.Component {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-          ...name,
-        }),
+        body: this.encode({ 'form-name': 'get-in-touch', ...this.state }),
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
@@ -67,6 +63,7 @@ class Contact extends React.Component {
           console.log(error);
         });
     }
+    e.preventDefault();
   }
   render() {
     return (
@@ -103,7 +100,6 @@ class Contact extends React.Component {
       return (
         <form
           name="get-in-touch"
-          method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
@@ -130,7 +126,7 @@ class Contact extends React.Component {
                 <AnimationContainer delay={100} animation="fadeInUp fast">
                   <div className="form-group">
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
