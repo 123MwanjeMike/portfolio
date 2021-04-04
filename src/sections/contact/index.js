@@ -63,7 +63,6 @@ class Contact extends React.Component {
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
-          navigate('/');
           this.setState({
             name: '',
             email: '',
@@ -139,7 +138,7 @@ class Contact extends React.Component {
                 <AnimationContainer delay={100} animation="fadeInUp fast">
                   <div className="form-group">
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
