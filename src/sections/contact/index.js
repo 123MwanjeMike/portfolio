@@ -52,6 +52,7 @@ class Contact extends React.Component {
     } else {
       this.setState({ error: false });
       const form = this.ContactForm.current;
+      console.log(form)
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
