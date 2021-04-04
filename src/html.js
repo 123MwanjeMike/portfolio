@@ -14,8 +14,9 @@ export default class HTML extends React.Component {
         </head>
         <body style={{ padding: '0px !important' }} className="no-overflow">
           <form
-            hidden
-            netlify
+            hidden="true"
+            method="POST"
+            data-netlify="true"
             name="get-in-touch"
             netlify-honeypot="bot-field"
             data-netlify-recaptcha="true"
