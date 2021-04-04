@@ -56,7 +56,7 @@ class Contact extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
-          ...name,
+          ...this.state,
         }),
       })
         .then(() => {
