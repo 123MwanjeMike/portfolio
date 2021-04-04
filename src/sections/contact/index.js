@@ -89,14 +89,14 @@ class Contact extends React.Component {
     if (this.state.show || this.context.height === 'auto') {
       return (
         <form
-          name="contact"
+          name="get-in-touch"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="get-in-touch" />
           <AnimationContainer delay={0} animation="fadeInUp fast">
             <div className="form-container">
               <div className="line-text">
@@ -118,11 +118,11 @@ class Contact extends React.Component {
                   <div className="form-group">
                     <input
                       type="text"
+                      name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
                       }`}
                       placeholder="Email"
-                      name="_replyto"
                       onChange={(e) => this.setState({ email: e.target.value })}
                     />
                   </div>
