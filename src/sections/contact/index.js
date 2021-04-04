@@ -34,6 +34,7 @@ class Contact extends React.Component {
   }
 
   submit(e) {
+    e.preventDefault();
     if (
       this.state.name === '' ||
       this.state.email === '' ||
@@ -42,7 +43,6 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      e.preventDefault();
       let formData = new FormData(e.target.form);
       fetch('/', {
         method: 'POST',
@@ -90,7 +90,6 @@ class Contact extends React.Component {
       return (
         <form
           name="contact"
-          netlify
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
