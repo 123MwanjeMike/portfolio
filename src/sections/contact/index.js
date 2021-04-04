@@ -42,7 +42,6 @@ class Contact extends React.Component {
   }
 
   submit(e) {
-    e.preventDefault();
     if (
       this.state.name === '' ||
       this.state.email === '' ||
@@ -64,6 +63,7 @@ class Contact extends React.Component {
           console.log(error);
         });
     }
+    e.preventDefault();
   }
   render() {
     return (
