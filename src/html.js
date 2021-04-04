@@ -13,7 +13,7 @@ export default class HTML extends React.Component {
           <link href="/img/favicon.ico" rel="icon" />
         </head>
         <body style={{ padding: '0px !important' }} className="no-overflow">
-          <form
+          {/* <form
             hidden="true"
             method="POST"
             data-netlify="true"
@@ -25,7 +25,7 @@ export default class HTML extends React.Component {
             <input type="text" name="email" />
             <input type="text" name="phone" />
             <textarea name="message"></textarea>
-          </form>
+          </form> */}
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}

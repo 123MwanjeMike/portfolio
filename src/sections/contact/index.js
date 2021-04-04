@@ -63,12 +63,6 @@ class Contact extends React.Component {
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
-          this.setState({
-            name: '',
-            email: '',
-            phone: '',
-            message: '',
-          });
         })
         .catch((error) => {
           swal('Error!', 'Something went wrong!', 'error');
