@@ -33,6 +33,14 @@ class Contact extends React.Component {
     }
   }
 
+  encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+      )
+      .join('&');
+  }
+
   submit(e) {
     e.preventDefault();
     if (
@@ -43,16 +51,21 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      let formData = new FormData(e.target.form);
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
+        body: encode({
+          'form-name': e.target.getAttribute('name'),
+          ...name,
+        }),
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
         })
-        .catch((error) => alert(error));
+        .catch((error) => {
+          swal('Error!', 'Something went wrong!', 'error');
+          console.log(error);
+        });
     }
   }
   render() {
