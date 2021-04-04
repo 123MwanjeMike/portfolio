@@ -33,7 +33,16 @@ class Contact extends React.Component {
     }
   }
 
+  encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+      )
+      .join('&');
+  }
+
   submit(e) {
+    e.preventDefault();
     if (
       this.state.name === '' ||
       this.state.email === '' ||
@@ -42,17 +51,21 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      e.preventDefault();
-      let formData = new FormData(e.target.form);
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...name,
+        }),
       })
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
         })
-        .catch((error) => alert(error));
+        .catch((error) => {
+          swal('Error!', 'Something went wrong!', 'error');
+          console.log(error);
+        });
     }
   }
   render() {
@@ -89,14 +102,14 @@ class Contact extends React.Component {
     if (this.state.show || this.context.height === 'auto') {
       return (
         <form
-          name="contact"
-          netlify
+          name="get-in-touch"
+          method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
         >
           <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="get-in-touch" />
           <AnimationContainer delay={0} animation="fadeInUp fast">
             <div className="form-container">
               <div className="line-text">
@@ -118,11 +131,11 @@ class Contact extends React.Component {
                   <div className="form-group">
                     <input
                       type="text"
+                      name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
                       }`}
                       placeholder="Email"
-                      name="_replyto"
                       onChange={(e) => this.setState({ email: e.target.value })}
                     />
                   </div>
