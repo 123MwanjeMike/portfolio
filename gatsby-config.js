@@ -1,13 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Mike Mwanje',
-    description: 'Resume/CV',
+    description:
+      'Resume/CV',
   },
   pathPrefix: '/',
   plugins: [
-    {
-      resolve: `gatsby-plugin-manifest`,
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -66,4 +64,4 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
   ],
-};
+}

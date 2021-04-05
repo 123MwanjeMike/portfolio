@@ -9,7 +9,6 @@ import ThemeContext from '../../context';
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.ContactForm = React.createRef();
     this.state = {
       name: '',
       email: '',
