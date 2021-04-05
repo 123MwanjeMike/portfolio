@@ -1,6 +1,6 @@
 import React from 'react';
 import * as emailjs from 'emailjs-com';
-import ReCAPTCHA from 'react-google-recaptcha';
+import Recaptcha from 'react-recaptcha';
 import swal from 'sweetalert';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
@@ -11,17 +11,31 @@ import ThemeContext from '../../context';
 class Contact extends React.Component {
   constructor(props) {
     super(props);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifiedRecaptcha = this.verifiedRecaptcha.bind(this);
     this.state = {
       name: '',
       email: '',
       phone: '',
       message: '',
-      error: false,
       show: false,
+      error: false,
+      isVerified: false,
+      recaptchaLoad: false,
     };
     this.show = this.show.bind(this);
   }
   static contextType = ThemeContext;
+
+  recaptchaLoaded() {
+    this.setState({ recaptchaLoad: true });
+  }
+
+  verifiedRecaptcha(response) {
+    if (response) {
+      this.setState({ isVerified: true });
+    }
+  }
 
   show() {
     this.setState({ show: true });
@@ -39,7 +53,9 @@ class Contact extends React.Component {
     if (
       this.state.name === '' ||
       this.state.email === '' ||
-      this.state.message === ''
+      this.state.message === '' ||
+      !this.state.isVerified ||
+      !this.state.recaptchaLoad
     ) {
       this.setState({ error: true });
     } else {
@@ -55,10 +71,10 @@ class Contact extends React.Component {
 
       emailjs
         .send(
-          'service_3lybvbo',
-          'template_kvao29v',
+          `service_3lybvbo`,
+          `${process.env.EMAIL_JS_TEMPLATE_ID}`,
           templateParams,
-          'user_Bp1Dik1OQyEs1fv9QWQwf',
+          `${process.env.EMAIL_JS_USER_ID}`,
         )
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
@@ -167,7 +183,12 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
-                {/* <ReCAPTCHA sitekey='6LeyK50aAAAAANy5oSUeIrRv6MMWyLR148J3jWqu' /> */}
+                <Recaptcha
+                  sitekey={`${process.env.RECAPTURE_SECRET_KEY}`}
+                  render="explicit"
+                  onloadCallback={this.recaptchaLoaded}
+                  verifyCallback={this.verifiedRecaptcha}
+                />
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div data-netlify-recaptcha="true"></div>
                   <div className="submit">
