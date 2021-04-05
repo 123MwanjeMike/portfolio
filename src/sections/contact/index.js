@@ -1,4 +1,6 @@
 import React from 'react';
+import * as emailjs from 'emailjs-com';
+import Recaptcha from 'react-recaptcha';
 import swal from 'sweetalert';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
@@ -9,17 +11,31 @@ import ThemeContext from '../../context';
 class Contact extends React.Component {
   constructor(props) {
     super(props);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifiedRecaptcha = this.verifiedRecaptcha.bind(this);
     this.state = {
       name: '',
       email: '',
       phone: '',
       message: '',
-      error: false,
       show: false,
+      error: false,
+      isVerified: false,
+      recaptchaLoad: false,
     };
     this.show = this.show.bind(this);
   }
   static contextType = ThemeContext;
+
+  recaptchaLoaded() {
+    this.setState({ recaptchaLoad: true });
+  }
+
+  verifiedRecaptcha(response) {
+    if (response) {
+      this.setState({ isVerified: true });
+    }
+  }
 
   show() {
     this.setState({ show: true });
@@ -33,28 +49,33 @@ class Contact extends React.Component {
     }
   }
 
-  encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-      )
-      .join('&');
-  }
-
   submit(e) {
     if (
       this.state.name === '' ||
       this.state.email === '' ||
-      this.state.message === ''
+      this.state.message === '' ||
+      !this.state.isVerified ||
+      !this.state.recaptchaLoad
     ) {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'get-in-touch', ...this.state }),
-      })
+
+      const { name, email, phone, message } = this.state;
+      let templateParams = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          `service_3lybvbo`,
+          `${process.env.EMAIL_JS_TEMPLATE_ID}`,
+          templateParams,
+          `${process.env.EMAIL_JS_USER_ID}`,
+        )
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
         })
@@ -65,6 +86,7 @@ class Contact extends React.Component {
     }
     e.preventDefault();
   }
+
   render() {
     return (
       <section
@@ -126,7 +148,7 @@ class Contact extends React.Component {
                 <AnimationContainer delay={100} animation="fadeInUp fast">
                   <div className="form-group">
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       className={`email ${
                         this.check(this.state.email) ? '' : 'error'
@@ -161,6 +183,12 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
+                <Recaptcha
+                  sitekey={`${process.env.RECAPTURE_SECRET_KEY}`}
+                  render="explicit"
+                  onloadCallback={this.recaptchaLoaded}
+                  verifyCallback={this.verifiedRecaptcha}
+                />
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div data-netlify-recaptcha="true"></div>
                   <div className="submit">
