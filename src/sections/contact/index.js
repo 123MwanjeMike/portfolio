@@ -1,4 +1,6 @@
 import React from 'react';
+import * as emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
 import swal from 'sweetalert';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
@@ -33,14 +35,6 @@ class Contact extends React.Component {
     }
   }
 
-  encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-      )
-      .join('&');
-  }
-
   submit(e) {
     if (
       this.state.name === '' ||
@@ -50,16 +44,22 @@ class Contact extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
-      const form = this.ContactForm.current;
-      console.log(form)
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': form.getAttribute('name'),
-          ...this.state,
-        }),
-      })
+
+      const { name, email, phone, message } = this.state;
+      let templateParams = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          'service_3lybvbo',
+          'template_kvao29v',
+          templateParams,
+          'user_Bp1Dik1OQyEs1fv9QWQwf',
+        )
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
         })
@@ -70,6 +70,7 @@ class Contact extends React.Component {
     }
     e.preventDefault();
   }
+
   render() {
     return (
       <section
@@ -166,6 +167,7 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
+                {/* <ReCAPTCHA sitekey='6LeyK50aAAAAANy5oSUeIrRv6MMWyLR148J3jWqu' /> */}
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div data-netlify-recaptcha="true"></div>
                   <div className="submit">
