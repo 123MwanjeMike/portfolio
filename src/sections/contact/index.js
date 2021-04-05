@@ -1,6 +1,5 @@
 import React from 'react';
 import * as emailjs from 'emailjs-com';
-import Recaptcha from 'react-recaptcha';
 import swal from 'sweetalert';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
@@ -11,8 +10,6 @@ import ThemeContext from '../../context';
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
-    this.verifiedRecaptcha = this.verifiedRecaptcha.bind(this);
     this.state = {
       name: '',
       email: '',
@@ -20,22 +17,10 @@ class Contact extends React.Component {
       message: '',
       show: false,
       error: false,
-      isVerified: false,
-      recaptchaLoad: false,
     };
     this.show = this.show.bind(this);
   }
   static contextType = ThemeContext;
-
-  recaptchaLoaded() {
-    this.setState({ recaptchaLoad: true });
-  }
-
-  verifiedRecaptcha(response) {
-    if (response) {
-      this.setState({ isVerified: true });
-    }
-  }
 
   show() {
     this.setState({ show: true });
@@ -53,9 +38,7 @@ class Contact extends React.Component {
     if (
       this.state.name === '' ||
       this.state.email === '' ||
-      this.state.message === '' ||
-      !this.state.isVerified ||
-      !this.state.recaptchaLoad
+      this.state.message === ''
     ) {
       this.setState({ error: true });
     } else {
@@ -120,14 +103,7 @@ class Contact extends React.Component {
   form() {
     if (this.state.show || this.context.height === 'auto') {
       return (
-        <form
-          name="get-in-touch"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
-        >
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="get-in-touch" />
+        <form name="get-in-touch" method="POST">
           <AnimationContainer delay={0} animation="fadeInUp fast">
             <div className="form-container">
               <div className="line-text">
@@ -183,12 +159,6 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
-                <Recaptcha
-                  sitekey='6LeyK50aAAAAANy5oSUeIrRv6MMWyLR148J3jWqu'
-                  render="explicit"
-                  onloadCallback={this.recaptchaLoaded}
-                  verifyCallback={this.verifiedRecaptcha}
-                />
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div data-netlify-recaptcha="true"></div>
                   <div className="submit">
