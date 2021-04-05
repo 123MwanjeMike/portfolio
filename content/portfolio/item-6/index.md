@@ -1,6 +1,7 @@
 ---
 id: 6
-image: './image.jpg'
-title: "UX Development for Company"
-category: "UI/UX Design"
+image: './delv.png'
+link: 'http://front-end-delv.herokuapp.com/'
+title: "Delv APP: Node.js + React"
+category: "Full-Stack"
 ---

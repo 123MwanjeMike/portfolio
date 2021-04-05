@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 export default class HTML extends React.Component {
   render() {
     return (
@@ -11,6 +11,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link href="/img/favicon.ico" rel="icon" />
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </head>
         <body style={{ padding: '0px !important' }} className="no-overflow">
           <div
@@ -20,6 +21,6 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    )
+    );
   }
 }
