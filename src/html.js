@@ -19,7 +19,7 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script
-            src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            src="https://www.google.com/recaptcha/api.js?&render=explicit"
             async
             defer
           ></script>
