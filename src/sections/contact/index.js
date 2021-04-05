@@ -71,10 +71,10 @@ class Contact extends React.Component {
 
       emailjs
         .send(
-          `service_3lybvbo`,
-          `${process.env.EMAIL_JS_TEMPLATE_ID}`,
+          'service_3lybvbo',
+          'template_kvao29v',
           templateParams,
-          `${process.env.EMAIL_JS_USER_ID}`,
+          'user_Bp1Dik1OQyEs1fv9QWQwf',
         )
         .then(() => {
           swal('Success!', 'Message sent!', 'success');
@@ -184,7 +184,7 @@ class Contact extends React.Component {
                   </div>
                 </AnimationContainer>
                 <Recaptcha
-                  sitekey={`${process.env.RECAPTURE_SECRET_KEY}`}
+                  sitekey='6LeyK50aAAAAANy5oSUeIrRv6MMWyLR148J3jWqu'
                   render="explicit"
                   onloadCallback={this.recaptchaLoaded}
                   verifyCallback={this.verifiedRecaptcha}
