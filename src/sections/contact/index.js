@@ -159,10 +159,6 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
-                <div
-                  class="g-recaptcha"
-                  data-sitekey="6LeyK50aAAAAANy5oSUeIrRv6MMWyLR148J3jWqu"
-                ></div>
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div className="submit">
                     <button

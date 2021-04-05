@@ -18,11 +18,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script
-            src="https://www.google.com/recaptcha/api.js?&render=explicit"
-            async
-            defer
-          ></script>
         </body>
       </html>
     );
