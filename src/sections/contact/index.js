@@ -1,6 +1,7 @@
 import React from 'react';
-import * as emailjs from 'emailjs-com';
 import swal from 'sweetalert';
+import * as emailjs from 'emailjs-com';
+import ReCAPTCHA from 'react-google-recaptcha';
 import './styles.scss';
 import { Row, Col } from 'react-bootstrap';
 import AnimationContainer from 'components/animation-container';
@@ -22,6 +23,8 @@ class Contact extends React.Component {
   }
   static contextType = ThemeContext;
 
+  recaptchaRef = React.createRef();
+
   show() {
     this.setState({ show: true });
   }
@@ -38,7 +41,7 @@ class Contact extends React.Component {
     if (
       this.state.name === '' ||
       this.state.email === '' ||
-      this.state.message === ''
+      this.state.message === '' 
     ) {
       this.setState({ error: true });
     } else {
@@ -50,6 +53,7 @@ class Contact extends React.Component {
         email: email,
         phone: phone,
         message: message,
+        'g-recaptcha-response': this.recaptchaRef.current.getValue(),
       };
 
       emailjs
@@ -103,7 +107,7 @@ class Contact extends React.Component {
   form() {
     if (this.state.show || this.context.height === 'auto') {
       return (
-        <form name="get-in-touch" method="POST">
+        <form name="get-in-touch" >
           <AnimationContainer delay={0} animation="fadeInUp fast">
             <div className="form-container">
               <div className="line-text">
@@ -159,6 +163,10 @@ class Contact extends React.Component {
                     ></textarea>
                   </div>
                 </AnimationContainer>
+                <ReCAPTCHA
+                  sitekey='6Le2WJ4aAAAAAJzF6-SRhc6oRSdEfWUItG99AL1H'
+                  ref={this.recaptchaRef}
+                />
                 <AnimationContainer delay={250} animation="fadeInUp fast">
                   <div className="submit">
                     <button
