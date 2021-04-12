@@ -132,6 +132,7 @@ class Testimonials extends React.Component {
                     value.content.frontmatter.image.childImageSharp.fluid.src
                   }
                   alt={value.content.frontmatter.name}
+                  onClick={() => open(value.content.frontmatter.profile)}
                 />
                 <div className="info">
                   <p className="name">{value.content.frontmatter.name}</p>
@@ -193,6 +194,7 @@ export default (props) => (
                 name
                 profession
                 heading
+                profile
                 image {
                   childImageSharp {
                     fluid(maxWidth: 200, maxHeight: 200) {

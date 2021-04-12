@@ -1,8 +1,9 @@
 ---
 id: 2
-image: './lydia_karungi.jpeg'
-heading: 'Hardworking'
-name: 'Lydia Karungi'
-profession: 'Software Engineer'
+image: './meleby_nyika.jpeg'
+heading: 'Team Player'
+name: 'Meleby Nyika'
+profession: 'Software Developer'
+profile: 'https://www.linkedin.com/in/meleby-nyika-40867a165'
 ---
-I have worked with Mike on various projects over the years and his a brilliant, hardworking and knowledgeable person.
+From my time with him, Mwanje Mike is a gentleman and a hardworking professional. His selfless character and good communication skills make him an excellent team player.
