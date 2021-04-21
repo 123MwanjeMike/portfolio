@@ -1,7 +1,7 @@
 ---
 id: 6
 image: './delv.png'
-link: 'http://front-end-delv.herokuapp.com/'
+link: 'https://delv.netlify.app/'
 title: "Delv APP: Node.js + React"
 category: "Full-Stack"
 ---
