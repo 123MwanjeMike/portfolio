@@ -7,7 +7,7 @@ import {
   faGithub,
   faLinkedin,
   faTwitter,
-  faWhatsapp,
+  faMedium,
 } from '@fortawesome/free-brands-svg-icons';
 import ThemeContext from '../../context';
 import './styles.scss';
@@ -54,6 +54,15 @@ class Hero extends React.Component {
               </p>
               <div className="social social_icons">
                 <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="social_icon"
+                  onClick={() =>
+                    window.open(
+                      'https://twitter.com/intent/follow?screen_name=Mwanje_Mike_',
+                    )
+                  }
+                />
+                <FontAwesomeIcon
                   icon={faGithub}
                   className="social_icon"
                   onClick={() =>
@@ -70,18 +79,9 @@ class Hero extends React.Component {
                   }
                 />
                 <FontAwesomeIcon
-                  icon={faTwitter}
+                  icon={faMedium}
                   className="social_icon"
-                  onClick={() =>
-                    window.open(
-                      'https://twitter.com/intent/follow?screen_name=Mwanje_Mike_',
-                    )
-                  }
-                />
-                <FontAwesomeIcon
-                  icon={faWhatsapp}
-                  className="social_icon"
-                  onClick={() => window.open(' https://wa.me/c/256774019975')}
+                  onClick={() => window.open('https://medium.com/@mwanjemike')}
                 />
               </div>
             </div>
