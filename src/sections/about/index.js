@@ -52,13 +52,13 @@ class Hero extends React.Component {
                 Automation, Cloud Computing with GCP and AWS, and Agile Project
                 Management with Scrum
               </p>
-              <div className="social social_icons">
+              <div className="social social_icons">                  
                 <FontAwesomeIcon
-                  icon={faTwitter}
+                  icon={faLinkedin}
                   className="social_icon"
                   onClick={() =>
                     window.open(
-                      'https://twitter.com/intent/follow?screen_name=Mwanje_Mike_',
+                      'https://www.linkedin.com/in/mike-mwanje-470b15155',
                     )
                   }
                 />
@@ -70,33 +70,33 @@ class Hero extends React.Component {
                   }
                 />
                 <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="social_icon"
-                  onClick={() =>
-                    window.open(
-                      'https://www.linkedin.com/in/mike-mwanje-470b15155',
-                    )
-                  }
-                />
-                <FontAwesomeIcon
                   icon={faMedium}
                   className="social_icon"
                   onClick={() => window.open('https://medium.com/@mwanjemike')}
+                />                
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="social_icon"
+                  onClick={() =>
+                    window.open(
+                      'https://twitter.com/intent/follow?screen_name=Mwanje_Mike_',
+                    )
+                  }
                 />
               </div>
             </div>
           </Col>
           <Col md={6} className="skills">
             <div className="line-text">
-              <h4>My Top Skills</h4>
+              <h4>Top Skills</h4>
             </div>
             <div className="skills-container">
               <Progress name="MongoDB" value={80} delay={1100} />
               <Progress name="React" value={80} delay={1100} />
               <Progress name="Node.js" value={70} delay={1100} />
-              <Progress name="Git" value={70} delay={1100} />
+              <Progress name="Git" value={80} delay={1100} />
               <Progress name="TDD" value={80} delay={1100} />
-              <Progress name="GCP" value={60} delay={1100} />
+              <Progress name="Google Cloud Platform" value={60} delay={1100} />
             </div>
           </Col>
         </Row>

@@ -146,7 +146,7 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faAws} className="solid" />
               </div>
-              <h4>Cloud Computing</h4>
+              <h4>Cloud Provisioning</h4>
               <p>
                 Cloud deployment with various PaaS and IaaS like MongoAtlas,
                 Heroku, Netlify, AWS, GCP that avail robust cloud provisioning
@@ -214,7 +214,7 @@ class Services extends React.Component {
             <AnimationContainer delay={100} animation="fadeIn fast">
               <Counter
                 icon={faCode}
-                value={500}
+                value={1000}
                 text="Pull Requests"
                 symbol="+"
                 duration={3}
