@@ -149,7 +149,7 @@ class Services extends React.Component {
               <h4>DevOps</h4>
               <p>
                 Creating safe and reliable deployment pipelines for software on
-                various PaaS and IaaS like Heroku, Netlify, AWS, GCP that avail
+                platforms such as Kubernetes, Heroku, Netlify, AWS, GCP that avail
                 robust cloud provisioning tools; and CI/CD tools that compliment
                 Gitlab, CircleCI and TravisCI.
               </p>
