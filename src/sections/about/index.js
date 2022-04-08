@@ -8,6 +8,7 @@ import {
   faLinkedin,
   faTwitter,
   faMedium,
+  faHackerrank,
 } from '@fortawesome/free-brands-svg-icons';
 import ThemeContext from '../../context';
 import './styles.scss';
@@ -29,30 +30,21 @@ class Hero extends React.Component {
               <div className="line-text">
                 <h4>About Me</h4>
               </div>
-              <h3>Full-Stack Web Developer</h3>
+              <h3>Full-Stack Engineer</h3>
               <div className="separator" />
               <p>
-                I am a Kampala, Uganda based MERN Stack web developer with a
-                drive and hunger for excellence.
+                Proactive software engineer with a focus on building Full-stack
+                web applications. 2+ years of professional experience using
+                MongoDB, Expressjs, React and Nodejs for developing web based
+                solutions in eCommerce, Marketing, Education and Transport
+                industries. Enthusiastic about Backend development and DevOps
+                with a strong CI/CD background in TDD, unit testing and
+                integration testing of APIs and backend services. Skilled in
+                agile project management processes and scrum. Competent with
+                JavaScript, Git and GitHub, CircleCI, Docker, GCP and
+                results-oriented life long learner.
               </p>
-              <p>
-                I have been engineering software solutions since 2018 and have
-                over a year of professional experience in a highly collaborative
-                environment developing web applications that solve business
-                problems.
-              </p>
-              <p>
-                I am also a lifelong learner curious about better ways of
-                solving problems and always ready to learn new tools and
-                technologies.
-                <br></br>
-                During my journey, I have gathered many transferable skills
-                ranging from programming languages like JavaScript and
-                Typescript, Design Patterns, Version Control with Git, Test
-                Automation, Cloud Computing with GCP and AWS, and Agile Project
-                Management with Scrum
-              </p>
-              <div className="social social_icons">                  
+              <div className="social social_icons">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="social_icon"
@@ -70,10 +62,17 @@ class Hero extends React.Component {
                   }
                 />
                 <FontAwesomeIcon
+                  icon={faHackerrank}
+                  className="social_icon"
+                  onClick={() =>
+                    window.open('https://www.hackerrank.com/mwanjemike')
+                  }
+                />
+                <FontAwesomeIcon
                   icon={faMedium}
                   className="social_icon"
                   onClick={() => window.open('https://medium.com/@mwanjemike')}
-                />                
+                />
                 <FontAwesomeIcon
                   icon={faTwitter}
                   className="social_icon"
@@ -91,12 +90,12 @@ class Hero extends React.Component {
               <h4>Top Skills</h4>
             </div>
             <div className="skills-container">
-              <Progress name="MongoDB" value={80} delay={1100} />
-              <Progress name="React" value={80} delay={1100} />
-              <Progress name="Node.js" value={70} delay={1100} />
               <Progress name="Git" value={80} delay={1100} />
-              <Progress name="TDD" value={80} delay={1100} />
-              <Progress name="Google Cloud Platform" value={60} delay={1100} />
+              <Progress name="Express" value={80} delay={1100} />
+              <Progress name="MongoDB" value={80} delay={1100} />
+              <Progress name="React" value={75} delay={1100} />
+              <Progress name="Node.js" value={70} delay={1100} />
+              <Progress name="Google Cloud Platform" value={75} delay={1100} />
             </div>
           </Col>
         </Row>

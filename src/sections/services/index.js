@@ -90,12 +90,12 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faReact} />
               </div>
-              <h4>Front-end Development</h4>
+              <h4>Frontend Development</h4>
               <p>
-                Working with technologies like HTML5, CSS3, Javascript to build
-                responsive and interactive designs, React(a javascript library)
-                for sophisticated Single-Page-Applications, and Gatsby for high
-                performant and fast applications.
+                Working with HTML5, Javascript to build responsive and
+                interactive interfaces, Gatsby for high performant fast
+                applications, React(a javascript library) for sophisticated
+                Single-Page-Applications, and Redux for state management.
               </p>
             </AnimationContainer>
           </Col>
@@ -104,12 +104,12 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faNodeJs} />
               </div>
-              <h4>Back-end Development</h4>
+              <h4>Backend Development</h4>
               <p>
                 Using Node.js, a javascript runtime environment, and Express.js,
                 a back-end web application framework for Node.js to create rich
-                Backend services and RESTful APIs unit tested with chai, and
-                mocha/Jest; and Postman for intergration tests.
+                Backend services and RESTful APIs unit tested with chai,
+                mocha/Jest, and Postman
               </p>
             </AnimationContainer>
           </Col>
@@ -118,7 +118,7 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faDatabase} />
               </div>
-              <h4>Database Development</h4>
+              <h4>Data Management</h4>
               <p>
                 Design and development of SQL databases like MySQL, MariaDB,
                 SQLite; and NoSQL databases like MongoDB, and Redis to provide a
@@ -146,11 +146,12 @@ class Services extends React.Component {
               <div className="icon">
                 <FontAwesomeIcon icon={faAws} className="solid" />
               </div>
-              <h4>Cloud Provisioning</h4>
+              <h4>DevOps</h4>
               <p>
-                Cloud deployment with various PaaS and IaaS like MongoAtlas,
-                Heroku, Netlify, AWS, GCP that avail robust cloud provisioning
-                tools; and CI/CD tools that compliment CircleCI and TravisCI.
+                Creating safe and reliable deployment pipelines for software on
+                various PaaS and IaaS like Heroku, Netlify, AWS, GCP that avail
+                robust cloud provisioning tools; and CI/CD tools that compliment
+                Gitlab, CircleCI and TravisCI.
               </p>
             </AnimationContainer>
           </Col>
