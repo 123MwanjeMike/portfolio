@@ -33,16 +33,16 @@ class Hero extends React.Component {
               <h3>Full-Stack Engineer</h3>
               <div className="separator" />
               <p>
-                Proactive software engineer with a focus on building Full-stack
-                web applications. 2+ years of professional experience using
-                MongoDB, Expressjs, React and Nodejs for developing web based
-                solutions in eCommerce, Marketing, Education and Transport
-                industries. Enthusiastic about Backend development and DevOps
-                with a strong CI/CD background in TDD, unit testing and
-                integration testing of APIs and backend services. Skilled in
-                agile project management processes and scrum. Competent with
-                JavaScript, Git and GitHub, CircleCI, Docker, GCP and
-                results-oriented life long learner.
+                Proactive Software Engineer with over 5 years of programming
+                experience. 2+ years of professional experience in Full Stack
+                web application development using MongoDB, Expressjs, React and
+                Nodejs for developing web based solutions in eCommerce,
+                Marketing, Education and Transport industries. Enthusiastic
+                about Backend development and DevOps with a strong CI/CD
+                background in TDD, unit testing and integration testing of APIs
+                and backend services. Skilled in agile project management
+                processes and scrum. Competent with JavaScript, Git and GitHub,
+                CircleCI, Docker, GCP and results-oriented life long learner.
               </p>
               <div className="social social_icons">
                 <FontAwesomeIcon
@@ -93,7 +93,7 @@ class Hero extends React.Component {
               <Progress name="Git" value={80} delay={1100} />
               <Progress name="Express" value={80} delay={1100} />
               <Progress name="MongoDB" value={80} delay={1100} />
-              <Progress name="React" value={75} delay={1100} />
+              <Progress name="React" value={70} delay={1100} />
               <Progress name="Node.js" value={70} delay={1100} />
               <Progress name="Google Cloud Platform" value={75} delay={1100} />
             </div>
