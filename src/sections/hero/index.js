@@ -51,7 +51,7 @@ class Hero extends React.Component {
           <Col md={6} className="img">
             <img
               src={this.props.mainImg.childImageSharp.fluid.src}
-              alt="person"
+              alt="mike_mwanje_profile_picture"
             />
           </Col>
         </Row>
