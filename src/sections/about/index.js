@@ -9,6 +9,7 @@ import {
   faTwitter,
   faMedium,
   faHackerrank,
+  faPluralsight
 } from '@fortawesome/free-brands-svg-icons';
 import ThemeContext from '../../context';
 import './styles.scss';
@@ -66,6 +67,13 @@ class Hero extends React.Component {
                   className="social_icon"
                   onClick={() =>
                     window.open('https://www.hackerrank.com/mwanjemike')
+                  }
+                />
+                <FontAwesomeIcon
+                  icon={faPluralsight}
+                  className="social_icon"
+                  onClick={() =>
+                    window.open('https://app.pluralsight.com/profile/mike-mwanje')
                   }
                 />
                 <FontAwesomeIcon
