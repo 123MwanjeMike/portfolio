@@ -71,7 +71,7 @@ class Hero extends React.Component {
                 <FontAwesomeIcon
                   icon={faMedium}
                   className="social_icon"
-                  onClick={() => window.open('https://medium.com/@mwanjemike')}
+                  onClick={() => window.open('https://blog.mikemwanje.dev')}
                 />
                 <FontAwesomeIcon
                   icon={faTwitter}
