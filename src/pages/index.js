@@ -5,7 +5,7 @@ import Layout from 'components/layout'
 import Spinner from 'components/spinner'
 import Hero from 'sections/hero'
 import About from 'sections/about'
-import Portfolio from 'sections/portfolio'
+// import Portfolio from 'sections/portfolio'
 import Services from 'sections/services'
 import Testimonials from 'sections/testimonials'
 import Contact from 'sections/contact'
@@ -24,7 +24,7 @@ class HomePage extends React.Component {
             <Hero id="home" />
             <About id="about" />
             <Services id="services" />
-            <Portfolio id="portfolio" />
+            {/* <Portfolio id="portfolio" /> */}
             <Testimonials id="testimonials" />
             <Contact id="contact" />
         </Layout>
